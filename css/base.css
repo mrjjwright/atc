@@ -1,0 +1,21 @@
+html {
+	background:#ffffff url(../images/bg_top.png) repeat-x left top;
+}
+
+body {
+	font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+	font-size: 83.33%;
+}
+
+#wrapper {
+	text-align: center;
+}
+
+.logo a {
+	text-decoration: none;
+}
+
+.wc-header td {
+	background: url(../images/header-bg.png) repeat-x;
+}
+
