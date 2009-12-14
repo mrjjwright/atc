@@ -1,0 +1,26 @@
+<h1>Listing time_slots</h1>
+
+<table>
+  <tr>
+    <th>Week of</th>
+    <th>Time slot</th>
+    <th>Full name</th>
+    <th>Workout type</th>
+  </tr>
+
+<% @time_slots.each do |time_slot| %>
+  <tr>
+    <td><%=h time_slot.week_of %></td>
+    <td><%=h time_slot.time_slot %></td>
+    <td><%=h time_slot.full_name %></td>
+    <td><%=h time_slot.workout_type %></td>
+    <td><%= link_to 'Show', time_slot %></td>
+    <td><%= link_to 'Edit', edit_time_slot_path(time_slot) %></td>
+    <td><%= link_to 'Destroy', time_slot, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New time_slot', new_time_slot_path %>

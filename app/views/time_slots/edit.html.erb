@@ -1,0 +1,28 @@
+<h1>Editing time_slot</h1>
+
+<% form_for(@time_slot) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :week_of %><br />
+    <%= f.text_field :week_of %>
+  </p>
+  <p>
+    <%= f.label :time_slot %><br />
+    <%= f.text_field :time_slot %>
+  </p>
+  <p>
+    <%= f.label :full_name %><br />
+    <%= f.text_field :full_name %>
+  </p>
+  <p>
+    <%= f.label :workout_type %><br />
+    <%= f.text_field :workout_type %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @time_slot %> |
+<%= link_to 'Back', time_slots_path %>

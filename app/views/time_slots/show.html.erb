@@ -1,0 +1,23 @@
+<p>
+  <b>Week of:</b>
+  <%=h @time_slot.week_of %>
+</p>
+
+<p>
+  <b>Time slot:</b>
+  <%=h @time_slot.time_slot %>
+</p>
+
+<p>
+  <b>Full name:</b>
+  <%=h @time_slot.full_name %>
+</p>
+
+<p>
+  <b>Workout type:</b>
+  <%=h @time_slot.workout_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_time_slot_path(@time_slot) %> |
+<%= link_to 'Back', time_slots_path %>
