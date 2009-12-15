@@ -56,16 +56,16 @@ namespace :deploy do
  
   desc "Redefine deploy:start"
   task :start, :roles => :app do
-    invoke_command "/opt/local/lib/ruby1.8/lib/ruby/gems/1.8/bin/mongrel_rails start -c #{deploy_to}/current -d -e production -P /home/#{webfaction_username}/webapps/#{application}/log/mongrel.pid -p #{webfaction_port}", :via => run_method
+    invoke_command "/usr/local/bin/mongrel_rails start -c #{deploy_to}/current -d -e production  -l /home/#{webfaction_username}/webapps/#{application}/log/mongrel.log -P /home/#{webfaction_username}/webapps/#{application}/log/mongrel.pid -p #{webfaction_port}", :via => run_method
   end
  
   desc "Redefine deploy:restart"
   task :restart, :roles => :app do
-    invoke_command "/usr/local/bin/mongrel_rails restart -c #{deploy_to}/current -P /home/#{webfaction_username}/webapps/#{application}/log/mongrel.pid", :via => run_method
+    invoke_command "/usr/local/bin/mongrel_rails restart -c #{deploy_to}/current   -P /home/#{webfaction_username}/webapps/#{application}/log/mongrel.pid", :via => run_method
   end
  
   desc "Redefine deploy:stop"
   task :stop, :roles => :app do
-    invoke_command "/usr/local/bin/mongrel_rails stop -c #{deploy_to}/current -P /home/#{webfaction_username}/webapps/#{application}/log/mongrel.pid", :via => run_method
+    invoke_command "/usr/local/bin/mongrel_rails stop -c #{deploy_to}/current  -P /home/#{webfaction_username}/webapps/#{application}/log/mongrel.pid", :via => run_method
   end
 end
