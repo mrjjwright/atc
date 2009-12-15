@@ -5358,3 +5358,300 @@ ActionController::RoutingError (No route matches "/images/favicon.ico" with {:me
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-14 20:00:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:00:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:00:56) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:00:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:01:14) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:01:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:01:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:04:38) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:04:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:05:15) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:05:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:05:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:05:42) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:05:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:06:11) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:06:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:06:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:06:37) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:06:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:06:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:06:43) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:06:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:06:50) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:06:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:06:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:07:48) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:07:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:08:21) [GET]
+  Parameters: {"page"=>"schedule"}
+Rendering template within layouts/application
+Rendering home/schedule
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/schedule]
+
+
+Processing TimeSlotsController#index (for 127.0.0.1 at 2009-12-14 20:08:21) [GET]
+  Parameters: {"week_of"=>"Dec 14 2009"}
+  [4;36;1mTimeSlot Load (1.4ms)[0m   [0;1mSELECT * FROM "time_slots" WHERE (week_of = 'Dec 14 2009') [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/time_slots?week_of=Dec%2014%202009]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:08:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:08:24) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:08:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:08:36) [GET]
+  Parameters: {"page"=>"schedule"}
+Rendering template within layouts/application
+Rendering home/schedule
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/schedule]
+
+
+Processing TimeSlotsController#index (for 127.0.0.1 at 2009-12-14 20:08:36) [GET]
+  Parameters: {"week_of"=>"Dec 14 2009"}
+  [4;35;1mTimeSlot Load (0.5ms)[0m   [0mSELECT * FROM "time_slots" WHERE (week_of = 'Dec 14 2009') [0m
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/time_slots?week_of=Dec%2014%202009]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:08:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:08:38) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:08:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-14 20:08:44) [GET]
+  Parameters: {"page"=>"schedule"}
+Rendering template within layouts/application
+Rendering home/schedule
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/schedule]
+
+
+Processing TimeSlotsController#index (for 127.0.0.1 at 2009-12-14 20:08:44) [GET]
+  Parameters: {"week_of"=>"Dec 14 2009"}
+  [4;36;1mTimeSlot Load (0.3ms)[0m   [0;1mSELECT * FROM "time_slots" WHERE (week_of = 'Dec 14 2009') [0m
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/time_slots?week_of=Dec%2014%202009]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 20:08:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
