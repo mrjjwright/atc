@@ -1,0 +1,20 @@
+development:
+    adapter: mysql
+    encoding: utf8
+    database: atc_dev
+    username: root
+    password: john
+  
+test:
+    adapter: mysql
+    encoding: utf8
+    database: atc_test
+    username: root
+    password: john
+
+production:
+    adapter: mysql
+    encoding: utf8
+    database: atc
+    username: root
+    password: john

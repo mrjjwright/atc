@@ -203,6 +203,15 @@ function resetCal() {
 			 $("." + today).addClass("today");
 		 }
 	 }
+	
+	//disable all links before today
+	if (thisMonday.compareTo(monday) == 1)  {
+		$(".add_reg_spot").hide();
+		$(".add_climbing_spot").hide();		
+	} else {
+		$(".add_reg_spot").show();
+		$(".add_climbing_spot").show();				
+	}
 }
 
 function loadCalData() {
