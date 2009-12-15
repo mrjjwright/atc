@@ -1,7 +1,7 @@
 load 'deploy'
  
 set :webfaction_username, "atc"
-set :webfaction_db_type, "mysqls"
+set :webfaction_db_type, "mysql"
 set :webfaction_db, "atc"
 set :webfaction_db_username, "atc"
 set :webfaction_port, "53193"
