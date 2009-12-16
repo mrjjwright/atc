@@ -1,0 +1,13 @@
+<p>
+  <b>Title:</b>
+  <%=h @media_profile.title %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%=h @media_profile.link %>
+</p>
+
+
+<%= link_to 'Edit', edit_media_profile_path(@media_profile) %> |
+<%= link_to 'Back', media_profiles_path %>

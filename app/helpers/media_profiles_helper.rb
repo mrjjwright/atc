@@ -1,0 +1,2 @@
+module MediaProfilesHelper
+end

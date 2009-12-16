@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+	font-family: Helvetica, "Lucida Grande", Arial, Verdana, sans-serif;
 	font-size: 83.33%;
 	margin: 0;
 	text-align: center;
@@ -15,7 +15,7 @@ body {
 }
 
 #header {
-	margin-top: 85px;
+	margin-top: 90px;
 }
 
 .logo a {
@@ -30,7 +30,7 @@ input[type="submit"], input[type="button"] {
 
 #links {
 	text-align: center;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 
 .today {
@@ -57,7 +57,7 @@ input[type="submit"], input[type="button"] {
 	padding-bottom: 5px;
 	padding-left: 15px;
 	padding-right: 15px;
-	font-size: 22px;
+	font-size: 18px;
 	background:#243041 url(../images/link_bg.png) repeat-x left top;
 }
 
@@ -74,9 +74,14 @@ input[type="submit"], input[type="button"] {
 		color: #000000;
 }
 
+#content h1 {
+	color: #1a3043;
+	font-size: 16px;	
+}
+
 #content h2 {
 	color: #1a3043;
-	font-size: 14px;
+	font-size: 16px;
 	clear: both;
 }
 
@@ -173,3 +178,21 @@ div.spacer {
   clear: both;
   height: 1px;
  }
+
+#news {
+	position: relative;
+	top: 40px;
+}
+
+#profiled_media {
+	float: left;
+	width: 450px;
+}
+
+#profiled_media img {
+	border:solid 1px #94a3c4;
+	background:white
+	margin: 10px 0px;
+	width: 400px;
+}
+

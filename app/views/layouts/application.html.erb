@@ -28,15 +28,25 @@
 		</h1>
 	</div>
 	<div id="links">
-		<div class="link"><a href="/">Home</a></div>
-		<div class="link"><a href="training">Training</a></div>
-		<div class="link"><a href="schedule">Schedule</a></div>
-		<div class="link"><a href="about">About</a></div>
-		<div class="link"><a href="athletes">Athletes</a></div>
-		<div class="link"><a href="partners">Partners</a></div>
+		<div class="link"><a href="/">HOME</a></div>
+		<div class="link"><a href="training">TRAINING</a></div>
+		<div class="link"><a href="schedule">SCHEDULE</a></div>
+		<div class="link"><a href="about">ABOUT</a></div>
+		<div class="link"><a href="athletes">ATHLETES</a></div>
+		<div class="link"><a href="partners">PARTNERS</a></div>
 	</div>
 
-	<div id="content"><%= yield %></div>
+	<div id="content">
+	<div class="spacer">
+		&nbsp;
+	</div>
+
+	<%= yield %>
+	<div class="spacer">
+		&nbsp;
+	</div>
+
+	</div>
 	
 	<div id="footer">THE ALPINE TRAINING CENTER. 1840 COMMERCE STREET. BOULDER, CO. (303)-859-4579</div>
 </div>
