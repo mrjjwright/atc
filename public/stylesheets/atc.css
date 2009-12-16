@@ -136,7 +136,11 @@ input[type="submit"], input[type="button"] {
 	padding: 5px 10px;
 	word-wrap: break-word;
 	width: 120px;
-	font-size: 12px;
+	font-size: 10px;
+}
+
+.time_slot a {
+	font-size: 11px;
 }
 
 .time_slot .people div {
@@ -154,7 +158,7 @@ input[type="submit"], input[type="button"] {
 	text-decoration: none;
 	font-size: 10px;
 	position: relative;
-	top: 1px;
+	bottom: 1px;
 }
 
 #footer {

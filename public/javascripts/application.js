@@ -199,7 +199,7 @@ function resetCal() {
 		 //we are on the right week
 		 //now see if we are in mon-friday
 		 var today = Date.today().toString("ddd");
-		 if (today == "Mon" || today == "Tues" || today == "Wed" || today == "Thurs" || today == "Fri") {
+		 if (today == "Mon" || today == "Tue" || today == "Wed" || today == "Thu" || today == "Fri") {
 			 $("." + today).addClass("today");
 		 }
 	 }
