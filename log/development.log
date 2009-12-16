@@ -6494,3 +6494,80 @@ Processing HomeController#show (for 127.0.0.1 at 2009-12-15 17:24:09) [GET]
 Rendering template within layouts/application
 Rendering home/schedule
 Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/schedule]
+
+
+Processing TimeSlotsController#index (for 127.0.0.1 at 2009-12-15 17:26:08) [GET]
+  Parameters: {"week_of"=>"Dec 14 2009"}
+  [4;36;1mTimeSlot Load (0.6ms)[0m   [0;1mSELECT * FROM "time_slots" WHERE (week_of = 'Dec 14 2009') [0m
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/time_slots?week_of=Dec%2014%202009]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-15 17:26:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-15 17:27:12) [GET]
+  Parameters: {"page"=>"schedule"}
+Rendering template within layouts/application
+Rendering home/schedule
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/schedule]
+
+
+Processing TimeSlotsController#index (for 127.0.0.1 at 2009-12-15 17:27:12) [GET]
+  Parameters: {"week_of"=>"Dec 14 2009"}
+  [4;35;1mTimeSlot Load (0.6ms)[0m   [0mSELECT * FROM "time_slots" WHERE (week_of = 'Dec 14 2009') [0m
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/time_slots?week_of=Dec%2014%202009]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-15 17:27:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-15 17:28:00) [GET]
+  Parameters: {"page"=>"schedule"}
+Rendering template within layouts/application
+Rendering home/schedule
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/schedule]
+
+
+Processing TimeSlotsController#index (for 127.0.0.1 at 2009-12-15 17:29:00) [GET]
+  Parameters: {"week_of"=>"Dec 14 2009"}
+  [4;36;1mTimeSlot Load (0.6ms)[0m   [0;1mSELECT * FROM "time_slots" WHERE (week_of = 'Dec 14 2009') [0m
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://localhost/time_slots?week_of=Dec%2014%202009]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-15 17:29:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-12-15 17:29:01) [GET]
+  Parameters: {"page"=>"schedule"}
+Rendering template within layouts/application
+Rendering home/schedule
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/schedule]
+
+
+Processing TimeSlotsController#index (for 127.0.0.1 at 2009-12-15 17:29:01) [GET]
+  Parameters: {"week_of"=>"Dec 14 2009"}
+  [4;35;1mTimeSlot Load (1.0ms)[0m   [0mSELECT * FROM "time_slots" WHERE (week_of = 'Dec 14 2009') [0m
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/time_slots?week_of=Dec%2014%202009]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-15 17:29:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
