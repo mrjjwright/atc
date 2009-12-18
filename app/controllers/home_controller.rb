@@ -4,10 +4,10 @@ class HomeController < ApplicationController
     @media_profile = MediaProfile.last
   end
   
-  def index_edit
-    @media_profile = MediaProfile.last
-  end
   
+  def about
+    @about = About.last
+  end
 
   def show
     render :action => params[:page]

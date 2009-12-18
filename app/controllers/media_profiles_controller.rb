@@ -67,13 +67,13 @@ class MediaProfilesController < ApplicationController
 
     if (params[:secret_key].nil?) then
       @media_profile.errors.add(:base, "Missing secret key")
-      render :action => "edit" 
+      render :action => "edit", :layout => 'application' 
       return
     end
     
     if (params[:secret_key] != ATC_SECRET_KEY) 
       @media_profile.errors.add(:base, "Wrong secret key")
-      render :action => "edit" 
+      render :action => "edit", :layout => 'application'
       return
     end
 
