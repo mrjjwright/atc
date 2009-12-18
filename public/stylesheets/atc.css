@@ -23,6 +23,11 @@ body {
 }
 
 
+input[type="text"]
+{
+	width: 400px;
+}
+
 input[type="submit"], input[type="button"] {
  	font-size:16px;
 	width: 100px;

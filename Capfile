@@ -29,6 +29,8 @@ task :after_symlink, :roles => :web do
 end
  
 default_environment["PATH"] = "/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/#{webfaction_username}/bin:/home/#{webfaction_username}/.gem/ruby/1.8/bin"
+default_environment["GEM_PATH"] = "/home/#{webfaction_username}/ruby1.8/lib/ruby/gems/1.8/gems"
+
 
 namespace :deploy do
  

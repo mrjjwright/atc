@@ -1,14 +1,18 @@
-<h1>Editing media_profile</h1>
+<h1>Admin</h1>
 
 <% form_for(@media_profile) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :title %><br />
+    <%= label_tag 'secret_key' %><br />
+    <%= password_field_tag 'secret_key' %>
+  </p>
+  <p>
+    <%= f.label :title, 'Image Title' %><br />
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :link %><br />
+    <%= f.label :link, 'Image URL' %><br />
     <%= f.text_field :link %>
   </p>
   <p>
@@ -16,5 +20,3 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @media_profile %> |
-<%= link_to 'Back', media_profiles_path %>

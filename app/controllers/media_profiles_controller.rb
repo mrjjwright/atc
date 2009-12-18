@@ -20,7 +20,7 @@ class MediaProfilesController < ApplicationController
       format.xml  { render :xml => @media_profile }
     end
   end
-
+  
   # GET /media_profiles/new
   # GET /media_profiles/new.xml
   def new
@@ -34,7 +34,12 @@ class MediaProfilesController < ApplicationController
 
   # GET /media_profiles/1/edit
   def edit
-    @media_profile = MediaProfile.find(params[:id])
+    @media_profile = MediaProfile.last
+      
+    respond_to do |format|
+      format.html { render :template => 'media_profiles/edit', :layout => 'application'}
+    end
+    
   end
 
   # POST /media_profiles
@@ -57,12 +62,25 @@ class MediaProfilesController < ApplicationController
   # PUT /media_profiles/1
   # PUT /media_profiles/1.xml
   def update
+
     @media_profile = MediaProfile.find(params[:id])
+
+    if (params[:secret_key].nil?) then
+      @media_profile.errors.add(:base, "Missing secret key")
+      render :action => "edit" 
+      return
+    end
+    
+    if (params[:secret_key] != ATC_SECRET_KEY) 
+      @media_profile.errors.add(:base, "Wrong secret key")
+      render :action => "edit" 
+      return
+    end
 
     respond_to do |format|
       if @media_profile.update_attributes(params[:media_profile])
         flash[:notice] = 'MediaProfile was successfully updated.'
-        format.html { redirect_to(@media_profile) }
+        format.html { redirect_to("/") }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
