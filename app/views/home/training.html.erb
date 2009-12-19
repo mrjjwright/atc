@@ -1,5 +1,5 @@
 <% @workouts.each {|w| %>
-	<h2><%=w.name%></h2>
-	<div><%= w.updated_at%></div>
+	<h2><%= w.updated_at.strftime("%a %b #{w.updated_at.day.ordinalize}") +  " - " + w.name%></h2>
+	<div></div>
 	<div><%= w.content%></div>
 <% }%>

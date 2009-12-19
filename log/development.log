@@ -12978,3 +12978,181 @@ Rendering rescues/layout (not_found)
   [4;35;1mWorkout Load (0.4ms)[0m   [0mSELECT * FROM "workouts" LIMIT 1[0m
   [4;36;1mWorkout Load (0.4ms)[0m   [0;1mSELECT * FROM "workouts" LIMIT 1[0m
   [4;36;1mWorkout Load (0.4ms)[0m   [0;1mSELECT * FROM "workouts" LIMIT 1[0m
+
+
+Processing MediaProfilesController#edit (for 127.0.0.1 at 2009-12-19 07:34:19) [GET]
+  [4;36;1mMediaProfile Load (0.4ms)[0m   [0;1mSELECT * FROM "media_profiles" ORDER BY media_profiles.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering media_profiles/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/media_profiles/edit.html.erb:
+1: <h1>Admin</h1>
+2: 
+3: <% form_for(@media_profile) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/media_profiles/edit.html.erb:3
+    app/controllers/media_profiles_controller.rb:40:in `edit'
+    app/controllers/media_profiles_controller.rb:39:in `edit'
+
+Rendered rescues/_trace (100.0ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MediaProfilesController#edit (for 127.0.0.1 at 2009-12-19 07:35:54) [GET]
+  [4;35;1mMediaProfile Load (0.3ms)[0m   [0mSELECT * FROM "media_profiles" LIMIT 1[0m
+  [4;36;1mMediaProfile Create (0.4ms)[0m   [0;1mINSERT INTO "media_profiles" ("created_at", "title", "updated_at", "link") VALUES('2009-12-19 14:35:54', NULL, '2009-12-19 14:35:54', NULL)[0m
+Rendering template within layouts/application
+Rendering media_profiles/edit
+Completed in 34ms (View: 4, DB: 1) | 200 OK [http://localhost/admin]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 07:35:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MediaProfilesController#update (for 127.0.0.1 at 2009-12-19 07:36:34) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"yQudMeIQv5gJRrDOhTvcp4nhAMxJyq1yTILq6mz4lrA=", "id"=>"1", "media_profile"=>{"title"=>"swing", "link"=>"http://photos-f.ak.fbcdn.net/hphotos-ak-snc3/hs072.snc3/13937_380095560234_331358835234_10315220_5617473_n.jpg"}, "secret_key"=>"dbthruster"}
+  [4;35;1mMediaProfile Load (0.2ms)[0m   [0mSELECT * FROM "media_profiles" WHERE ("media_profiles"."id" = 1) [0m
+  [4;36;1mMediaProfile Update (0.3ms)[0m   [0;1mUPDATE "media_profiles" SET "updated_at" = '2009-12-19 14:36:34', "title" = 'swing', "link" = 'http://photos-f.ak.fbcdn.net/hphotos-ak-snc3/hs072.snc3/13937_380095560234_331358835234_10315220_5617473_n.jpg' WHERE "id" = 1[0m
+Redirected to http://localhost:5000/
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/media_profiles/1]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-19 07:36:34) [GET]
+  [4;35;1mMediaProfile Load (0.4ms)[0m   [0mSELECT * FROM "media_profiles" LIMIT 1[0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 07:36:34) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-19 07:36:39) [GET]
+  [4;36;1mWorkout Load (0.8ms)[0m   [0;1mSELECT * FROM "workouts" [0m
+Rendering template within layouts/application
+Rendering home/training
+Completed in 20ms (View: 16, DB: 1) | 200 OK [http://localhost/training]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 07:36:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-19 07:39:00) [GET]
+  [4;35;1mWorkout Load (0.8ms)[0m   [0mSELECT * FROM "workouts" [0m
+Rendering template within layouts/application
+Rendering home/training
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://localhost/training]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 07:39:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-19 07:39:46) [GET]
+  [4;36;1mWorkout Load (0.8ms)[0m   [0;1mSELECT * FROM "workouts" [0m
+Rendering template within layouts/application
+Rendering home/training
+
+ActionView::TemplateError (undefined local variable or method `time' for #<ActionView::Base:0x103286438>) on line #3 of app/views/home/training.html.erb:
+1: <% @workouts.each {|w| %>
+2: 	<h2><%=w.name%></h2>
+3: 	<div><%= w.updated_at.strftime("%a %b #{time.day.ordinalize}")%></div>
+4: 	<div><%= w.content%></div>
+5: <% }%>
+
+    app/views/home/training.html.erb:3
+    app/views/home/training.html.erb:1:in `each'
+    app/views/home/training.html.erb:1
+
+Rendered rescues/_trace (34.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-19 07:40:07) [GET]
+  [4;35;1mWorkout Load (0.8ms)[0m   [0mSELECT * FROM "workouts" [0m
+Rendering template within layouts/application
+Rendering home/training
+
+ActionView::TemplateError (undefined method `ordinalize' for Fri Dec 18 20:23:27 UTC 2009:Time) on line #3 of app/views/home/training.html.erb:
+1: <% @workouts.each {|w| %>
+2: 	<h2><%=w.name%></h2>
+3: 	<div><%= w.updated_at.strftime("%a %b #{w.updated_at.ordinalize}")%></div>
+4: 	<div><%= w.content%></div>
+5: <% }%>
+
+    app/views/home/training.html.erb:3
+    app/views/home/training.html.erb:1:in `each'
+    app/views/home/training.html.erb:1
+
+Rendered rescues/_trace (96.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-19 07:40:36) [GET]
+  [4;36;1mWorkout Load (0.7ms)[0m   [0;1mSELECT * FROM "workouts" [0m
+Rendering template within layouts/application
+Rendering home/training
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://localhost/training]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 07:40:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-19 07:41:32) [GET]
+  [4;35;1mWorkout Load (0.8ms)[0m   [0mSELECT * FROM "workouts" [0m
+Rendering template within layouts/application
+Rendering home/training
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://localhost/training]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 07:41:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-19 07:41:42) [GET]
+  [4;36;1mWorkout Load (0.8ms)[0m   [0;1mSELECT * FROM "workouts" [0m
+Rendering template within layouts/application
+Rendering home/training
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://localhost/training]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 07:41:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
