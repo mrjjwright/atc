@@ -13156,3 +13156,4 @@ ActionController::RoutingError (No route matches "/images/favicon.ico" with {:me
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mWorkout Load (0.4ms)[0m   [0;1mSELECT * FROM "workouts" LIMIT 1[0m
