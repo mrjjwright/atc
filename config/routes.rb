@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :workouts
+
   map.resources :abouts
 
   map.resources :media_profiles
@@ -16,11 +18,12 @@ ActionController::Routing::Routes.draw do |map|
   #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
   # This route can be invoked with purchase_url(:id => product.id)
 
+  map.connect 'training', :controller => 'home', :action => 'training'
+  map.connect 'about', :controller => 'home', :action => 'about'
+  map.connect 'about/admin', :controller => 'abouts', :action => 'edit'
   map.root :controller => 'home'
   map.home ':page', :controller => 'home', :action => 'show', :page => /athletes|partners|schedule|training|/
   map.admin_landing 'admin', :controller => 'media_profiles', :action => 'edit'
-  map.connect 'about', :controller => 'home', :action => 'about'
-  map.connect 'about/admin', :controller => 'abouts', :action => 'edit'
   
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   map.resources :products

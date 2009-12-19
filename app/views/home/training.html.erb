@@ -1,1 +1,5 @@
-Coming soon!
+<% @workouts.each {|w| %>
+	<h2><%=w.name%></h2>
+	<div><%= w.updated_at%></div>
+	<div><%= w.content%></div>
+<% }%>
