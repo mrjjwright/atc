@@ -2,7 +2,7 @@ require 'mini_fb'
 
 class Facebook
 
-  NOTE_FQL = "SELECT title, note_id, created_time, updated_time, content FROM note WHERE uid='331358835234' AND updated_time > "
+  NOTE_FQL = "SELECT title, note_id, created_time, updated_time, content FROM note WHERE uid='331358835234' "
   STATUS_FQL = "SELECT message FROM status WHERE uid='331358835234' ORDER BY time DESC"
   FB_API_KEY = "cef99f497bdc50e0097b3110d1a84163"
   FB_SECRET_KEY = "3ce48cc13f682fcf2e5d3b86abf91693"
@@ -15,8 +15,12 @@ class Facebook
   end
   
   def sync_workouts()
-    query = NOTE_FQL + Workout.first.updated_at.to_i.to_s
-    p "Executing #{NOTE_FQL}"
+    query = NOTE_FQL
+    last_ts = Workout.first.updated_at.to_i.to_s unless Workout.first.nil?
+    unless last_ts.nil?
+      query = query + " AND updated_time > " + last_ts
+    end
+    p "Executing #{query}"
     workouts = MiniFB.call(FB_API_KEY, FB_SECRET_KEY, "FQL.query", "query" => query, "session_key" => FB_SESSION_KEY, "expires" => 0)
     num_imported = 0
     workouts.each {|workout|

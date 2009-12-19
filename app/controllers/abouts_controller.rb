@@ -35,6 +35,11 @@ class AboutsController < ApplicationController
   # GET /abouts/1/edit
   def edit
     @about = About.last
+    if @about.nil? then
+        @about = About.new
+        @about.save
+    end
+    
     respond_to do |format|
       format.html { render  :template => 'abouts/edit', :layout => 'application'}
     end
