@@ -2,6 +2,7 @@
 # Configure your app in config/environment.rb and config/environments/*.rb
 
 RAILS_ROOT = "#{File.dirname(__FILE__)}/.." unless defined?(RAILS_ROOT)
+p "RAILS_ROOT is #{RAILS_ROOT}"
 
 module Rails
   class << self
