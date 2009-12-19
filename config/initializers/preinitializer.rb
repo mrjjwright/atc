@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'rufus/scheduler'
 
+ATC_SECRET_KEY = "dbthruster"
+
 scheduler = Rufus::Scheduler.start_new
 
 # import feeds for all the old users
