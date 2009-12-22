@@ -34,7 +34,7 @@ class MediaProfilesController < ApplicationController
 
   # GET /media_profiles/1/edit
   def edit
-    @media_profile = MediaProfile.first
+    @media_profile = MediaProfile.last
     if @media_profile.nil? then
       @media_profile = MediaProfile.new
       @media_profile.save
