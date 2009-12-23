@@ -19,7 +19,7 @@ class HomeController < ApplicationController
   end
 
   def training
-    @workouts = Workout.all
+    @workouts = Workout.reverse_chrono_order.all
   end
   
   def show

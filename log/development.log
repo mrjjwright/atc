@@ -14584,3 +14584,208 @@ ActionController::RoutingError (No route matches "/images/favicon.ico" with {:me
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing MediaProfilesController#edit (for 127.0.0.1 at 2009-12-22 22:49:37) [GET]
+  [4;35;1mMediaProfile Load (0.5ms)[0m   [0mSELECT * FROM "media_profiles" ORDER BY media_profiles.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering media_profiles/edit
+Completed in 126ms (View: 16, DB: 1) | 200 OK [http://localhost/admin]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-22 22:49:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-23 15:14:29) [GET]
+  [4;36;1mMediaProfile Load (19.8ms)[0m   [0;1mSELECT * FROM "media_profiles" ORDER BY media_profiles.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 404ms (View: 113, DB: 20) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-23 15:14:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-23 15:14:32) [GET]
+  [4;35;1mMediaProfile Load (0.5ms)[0m   [0mSELECT * FROM "media_profiles" ORDER BY media_profiles.id DESC LIMIT 1[0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 41ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-23 15:14:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-23 15:14:35) [GET]
+  [4;36;1mWorkout Load (12.9ms)[0m   [0;1mSELECT * FROM "workouts" [0m
+
+NoMethodError (undefined method `chrono_order' for []:Array):
+  app/controllers/home_controller.rb:22:in `training'
+
+Rendered rescues/_trace (28.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-23 15:15:17) [GET]
+  [4;36;1mWorkout Load (0.4ms)[0m   [0;1mSELECT * FROM "workouts" [0m
+
+NoMethodError (undefined method `chrono_order' for []:Array):
+  app/controllers/home_controller.rb:22:in `training'
+
+Rendered rescues/_trace (28.5ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-23 15:15:31) [GET]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `order' for #<Class:0x104486728>):
+  app/controllers/home_controller.rb:22:in `training'
+
+Rendered rescues/_trace (31.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-23 15:15:38) [GET]
+  [4;36;1mWorkout Load (0.4ms)[0m   [0;1mSELECT * FROM "workouts" ORDER BY created_at asc[0m
+Rendering template within layouts/application
+Rendering home/training
+Completed in 40ms (View: 28, DB: 0) | 200 OK [http://localhost/training]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-23 15:15:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-23 15:15:40) [GET]
+  [4;35;1mWorkout Load (10.3ms)[0m   [0mSELECT * FROM "workouts" ORDER BY created_at asc[0m
+Rendering template within layouts/application
+Rendering home/training
+Completed in 16ms (View: 1, DB: 10) | 200 OK [http://localhost/training]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-23 15:15:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mWorkout Load (21.9ms)[0m   [0;1mSELECT * FROM "workouts" LIMIT 1[0m
+  [4;35;1mWorkout Load (0.2ms)[0m   [0mSELECT * FROM "workouts" WHERE ("workouts"."external_id" = '219955455795') LIMIT 1[0m
+  [4;36;1mWorkout Create (0.7ms)[0m   [0;1mINSERT INTO "workouts" ("name", "created_at", "updated_at", "external_id", "content") VALUES('"Last Minute Shopper"', '2009-12-23 21:29:58', '2009-12-23 21:29:58', '219955455795', 'One more grind before the holidays. Another one that sneeks up on you as you progress through the rounds. Warning: Don''t do this before a day of skiing...
+
+Training #1 6 rounds with pack M25#/W15# of 50x stepups, 40x airsquats, 30 walking lunges total M25#DB/W15#DB, 20x KB clean & press 10 on ea arm M12kg/W8kg, 10x jingle jangles, 5x pullups (yes with the pack!) and 1 min rest. #2 100x situps.
+
+Happy Holidays!')[0m
+  [4;35;1mWorkout Load (0.1ms)[0m   [0mSELECT * FROM "workouts" WHERE ("workouts"."external_id" = '217034500795') LIMIT 1[0m
+  [4;36;1mWorkout Create (0.2ms)[0m   [0;1mINSERT INTO "workouts" ("name", "created_at", "updated_at", "external_id", "content") VALUES('"Company of Strangers"', '2009-12-21 21:47:40', '2009-12-21 21:47:40', '217034500795', 'While it doesn''t look so tough on paper...this one kinda sneeks up on you, especially the last few rounds of Part 3. My athletes finished in about 45-50 minutes so they got a little bonus at the end, I''ll leave that to your discretion.
+
+Warmup 3x Curtis Ps, 3x pushups, 1/2 HAM, 5x Curtis Ps, 5x pushups, 1/2 HAM, 7x Curtis Ps, 7x pushups, 1/2 HAM, 9x Curtis Ps, 9x pushups, 1/2 HAM.
+Training #1 6 rounds of 3x SBGUs ea side, 2 tire jumps and sprint, 10x back extensions 8kg. #2 6 rounds 5x shoulder to shoulder sandbag push presses ea side, 10x Romanian deadlifts, 5x ankle to bar. #3 6 rounds 3x sandbag clean & squat ea side, DB crawl 10m, 10x box jumps, DB crawl 10m. Bonus: 400m sandbag run...enjoying a nice warm spell before Christmas so the 9am crew got to go for a run, outside.
+
+For the tire jump/sprint a good sub would be 4x tuck jumps (knees to chest) and sprint 20m. Shoulder to shoulder push press goes up over the head, use a dumbbell or kettlebell in place of sandbag if necessary. Women did 30-40# and Men were anywhere from 45-60#. ')[0m
+  [4;35;1mWorkout Load (0.2ms)[0m   [0mSELECT * FROM "workouts" WHERE ("workouts"."external_id" = '212682710795') LIMIT 1[0m
+  [4;36;1mWorkout Create (0.3ms)[0m   [0;1mINSERT INTO "workouts" ("name", "created_at", "updated_at", "external_id", "content") VALUES('"Whiskey Hangover"', '2009-12-18 20:23:27', '2009-12-18 20:23:27', '212682710795', 'Back to strength today as we test our deadlift max. For new athletes we are establishing a starting point for the veteran athletes we are looking to see the gains they have made over the last several weeks.
+
+Warmup 3 rounds of 10x deadlifts 95#/65#, 10x KB swings, 3x TGUs ea side, 3x hip swivel ea side. Training #1 Work up to 1 RM deadlift, #2 8 rounds of 1 DL at 90%, 5x box jumps every minute. #3 6 rounds 10x push press, 10x ball slams, 1x KB pull, 30 sec tuck jumps, 1x sprint lap, 5x windshield wipers ea side, 5x shoulder scarecrows.
+
+No ball to slam...substitute ankle to bar. No place to pull...10x horizontal pullups.')[0m
+  [4;35;1mWorkout Load (0.2ms)[0m   [0mSELECT * FROM "workouts" WHERE ("workouts"."external_id" = '209779370795') LIMIT 1[0m
+  [4;36;1mWorkout Create (0.2ms)[0m   [0;1mINSERT INTO "workouts" ("name", "created_at", "updated_at", "external_id", "content") VALUES('"Don''t Hate"', '2009-12-16 21:22:34', '2009-12-16 22:30:37', '209779370795', 'Today we test the athlete''s strength, lungs and mental toughness with a short but timed work capacity effort. Try to keep moving from one exercise to the next. Our fastest athlete so far has done it in 13:42. Give it a try!
+
+Warmup 4 rounds of OH plate lunge 25m, 1/2 sprint lap or 25m, 10x alligator pushups.
+Training 1. 6 rounds for time...15x KB swings M20kg/W16kg, 10x WTD situps M45#/W35#, 10x box jumps M24"/W20", 10x STD Russian Twist ea side M25#/W15#, 5x DB thrusters M35#/W20#, 5x horizontal pullups. Breathe for a few minutes then part 2 not for time 4 rounds 50x stepups, 1 min wall sit, 1x tire drag, 10 GHD situps. 3. Max # of pullups...full pullups straight arm to chin over the bar. No time limit you just can''t come off the bar. Keep a record of both, you''ll see this again.')[0m
+  [4;35;1mWorkout Load (0.3ms)[0m   [0mSELECT * FROM "workouts" WHERE ("workouts"."external_id" = '206788310795') LIMIT 1[0m
+  [4;36;1mWorkout Create (0.4ms)[0m   [0;1mINSERT INTO "workouts" ("name", "created_at", "updated_at", "external_id", "content") VALUES('"Striped Pajamas"', '2009-12-14 20:55:28', '2009-12-14 20:55:28', '206788310795', 'We return to the heavy weights today but mostly to see what kind of strength the athletes developed throughout the ski conditioining cycle. Today we did a 1 rep max of the front squat..some pretty impressive numbers.
+
+Warmup 4 rounds of 10x goblet squats, 5x burpees, 10x plank kicks ea side.
+Training 1. Work up to 1 RM of front squat 2. 6 rounds of 2x front squat at 85%, 5x broad jumps, 10x glute leg raise ea side. 3. 6 rounds of 3x Curtis Ps, 1x sprint lap, frog stretch for count of 3 4. 6 rounds of 5x Bench press, 5x pullups, 10x poorman''s hyper.
+
+The plank kick is a new one for us. From the standard front plank position the leg is "kicked" to the side and then back to center. Do 10 on each leg - no rest between sides. Tougher than it sounds - but then you probably already knew that.')[0m
+  [4;35;1mWorkout Load (0.1ms)[0m   [0mSELECT * FROM "workouts" WHERE ("workouts"."external_id" = '202617130795') LIMIT 1[0m
+  [4;36;1mWorkout Create (0.2ms)[0m   [0;1mINSERT INTO "workouts" ("name", "created_at", "updated_at", "external_id", "content") VALUES('"Western Psyche"', '2009-12-11 23:42:20', '2009-12-11 23:42:20', '202617130795', 'Last day to unload before we see the return of heavy weight. Today''s session is 2x 20 minute blocks of pure work capacity. Nothing heavy. Nothing super hard. Just constant work.
+
+Warmup: 20-15-10-5 of Goblet squats, Scotty Bob''s only 1 pushup per & situps. Training Part 1 AMRAP (as many rounds as possible) in 20 minutes of mini leg blaster, 60 sec plankwalkup, 10x ball slams, 10x horizontal pullups, HUG. Part 2 AMRAP in 20 minutes of 1 minute on system boards, 10x cauldron, 10x DB Hang clean& Press to Overhead squat, 6x sprints, 5x shoulder scarecrows. Part 2 5 rounds 30 sec burpees, 30 sec rest.
+
+Next week we hit it hard again. Testing strength on some of the key lifts and pushing the work capacity efforts. Hopefully this unload week has left the athletes hungry for more.')[0m
+  [4;35;1mWorkout Load (0.1ms)[0m   [0mSELECT * FROM "workouts" WHERE ("workouts"."external_id" = '199955030795') LIMIT 1[0m
+  [4;36;1mWorkout Create (0.2ms)[0m   [0;1mINSERT INTO "workouts" ("name", "created_at", "updated_at", "external_id", "content") VALUES('"Precious Moments"', '2009-12-10 03:17:13', '2009-12-10 03:17:13', '199955030795', 'What started as an unload workout quickly became a long grind for the 7am crew. Lucky for them they were the experimental group and did a little more suffering than everyone else. But if you show up for a training session at 7am and the temperature is below zero, you are probably tough enough to handle anything.
+
+It started as Warmup of 4 rounds of 50x stepups, 10x Overhead squats w/ PVC, 60 sec ab bridge complex. Training 15 - 1 Deadlifts, 1-arm situps, corkscrews, toes 2 sky and Overhead lunge steps. It quickly went to a 13-1 countdown and still it was too much for many of the athletes.
+
+The key to this workout is loading. Err on the heavy side and you are going to get crushed by the 1-arm situps. Err on the light side and you will sail through. Find the happy medium and you will hit 1 hour on the nose.
+
+On the climbing front, the new ice holds went up today and Kevin was the first to give them a try. He is already pretty adept at swinging and sticking. Next is to increase the time he can spend on the holds. Pretty exciting to see how it will transfer to the real ice.')[0m
+  [4;35;1mWorkout Load (0.3ms)[0m   [0mSELECT * FROM "workouts" WHERE ("workouts"."external_id" = '197615195795') LIMIT 1[0m
+  [4;36;1mWorkout Create (0.3ms)[0m   [0;1mINSERT INTO "workouts" ("name", "created_at", "updated_at", "external_id", "content") VALUES('"Eye of The Storm"', '2009-12-08 03:36:47', '2009-12-08 03:36:47', '197615195795', 'After 8 hard weeks of training, the athletes are rewarded with a week of unload sessions. A chance for the body and mind to recover from all the hard training. This work capacity effort was a good break from heavy lifting and shifts our focus back to our lungs. Much more of that to come.
+
+Warmup: 3 rounds of 20x airsquats, 10x jumping squats, 5x TGUs ea side. Training Part 1 6 rounds of 30 sec swings, 10x box jumps, 5x KB floor press ea side, 60 sec dynamic plank & pigeon stretch. Part 2 6 rounds of 5x DB thrusters, 10x jingle jangles, 5x pullups, 10x pushups, 10x WTD situps, 5x shoulder dislocates.
+
+Ten weeks ago Joey Thompson came to the Alpine Training Center with the sole purpose of getting stronger for his alpine ski guide certification course. His skills as a guide are unquestionable but he questioned his strength for 10 days of a very intensive ski training course. Our mission: get him strong. One of his first training sessions included walking lunges with a 25# pack...it crushed him we both knew the road that lay ahead. But he didn''t stop but set in and worked harder. Tonight he repeated that same series of stepups and walking lunges and he crushed it! Many nights of hard work in the gym has him ready and stronger than ever. Good luck Joey! ')[0m
+  [4;35;1mWorkout Load (0.1ms)[0m   [0mSELECT * FROM "workouts" WHERE ("workouts"."external_id" = '195356390795') LIMIT 1[0m
+  [4;36;1mWorkout Create (0.2ms)[0m   [0;1mINSERT INTO "workouts" ("name", "created_at", "updated_at", "external_id", "content") VALUES('"Verbal Defecation"', '2009-12-05 03:11:11', '2009-12-05 03:11:11', '195356390795', 'Today''s session went something like this...
+Warmup: 3 rounds 5x DOT drill, 10x situps, 10x DB push press, 5x shoulder dislocates
+Training: #1 1min ski hops/1 min tuck hold/30 sec rest. #2 5 rounds 3x Bench Press HVY, 5x pullups, 5x keg lift ea side. #3 5 rounds 5x Mrs. Spectaculars, 6x jingle jangles, 1/2 WTD lunge lap HVY.
+
+Interesting to watch the athletes today as many struggled through the ski hops and tucks. We have done these before but today they were particulary devastating. Tired from a week of training? Improper warmup? Or just plain too much? The evening session did a different warmup to see if that was it - nope. Having done them before, the volume shouldn''t have been too much. So must just be a hard week of training...')[0m
+  [4;35;1mWorkout Load (0.3ms)[0m   [0mSELECT * FROM "workouts" WHERE ("workouts"."external_id" = '195145135795') LIMIT 1[0m
+  [4;36;1mWorkout Create (0.4ms)[0m   [0;1mINSERT INTO "workouts" ("name", "created_at", "updated_at", "external_id", "content") VALUES('Ski conditioning finale', '2009-12-04 20:53:46', '2009-12-04 20:53:46', '195145135795', 'Today is the last official day of the ski conditioning program. For the past 8 weeks we have jumped, squated, tucked, sat on a wall and were destroyed by sandbags. Many are happy to move on. On the plus side, everyone has gotten stronger. The first week of 8 rounds of 30 sec ski hops with 30 sec tuck hold is miles away and way to easy now. We have progressed to 8 rounds of 1 min hops and 1 min tuck and 30 sec rest. No joke. Two minutes of wall sits now seem almost as hard as the 30 sec wall sit we started with. Probably don''t need to mention leg blasters. But I will. We finished Monday with 6 rounds of full leg blasters with just 30 seconds rest. Left most everyone tired for several days. But when they go to ski, they will secretly thank me - pretty sure. The final round of sandbag getups was still hard, they never get easier, but many increased their reps significantly.
+
+What does this all mean? For the skiers, they will be stronger, last longer, be more durable and hopefully avoid injury. For non-skiers, pretty sure they have the strongest legs they have ever had, along with a few bonus sandbag getups.
+
+Coming up next is an unload week. A chance to rest & recover. Give the knees a break from the squatting and jumping and give the mind a rest from all the hard work.')[0m
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-23 15:16:17) [GET]
+  [4;36;1mWorkout Load (1.0ms)[0m   [0;1mSELECT * FROM "workouts" ORDER BY created_at asc[0m
+Rendering template within layouts/application
+Rendering home/training
+Completed in 27ms (View: 23, DB: 1) | 200 OK [http://localhost/training]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-23 15:16:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#training (for 127.0.0.1 at 2009-12-23 15:16:46) [GET]
+  [4;35;1mWorkout Load (21.4ms)[0m   [0mSELECT * FROM "workouts" ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering home/training
+Completed in 29ms (View: 4, DB: 21) | 200 OK [http://localhost/training]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-23 15:16:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
