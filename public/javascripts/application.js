@@ -252,20 +252,20 @@ function loadCalData() {
 			var numOfRegSpotsLeft = MAX_REG_SPOTS - $("#" + timeSlot + " .people div.regular").length;
 			 if (numOfRegSpotsLeft <= 0) {
 				 //remove the add links
-				 $("#" + timeSlot + " div:has(a.add_reg_spot)").remove();
+				 $("#" + timeSlot + " .add_reg_spot").hide();
 			 } else {
 				 //update the number of spots left in the link
-				 $("#" + timeSlot + " div a.add_reg_spot").html(numOfRegSpotsLeft + " regular left");
+				 $("#" + timeSlot + " .add_reg_spot").html(numOfRegSpotsLeft + " regular left");
 			 }
 
 			//update the climbing spots link
 			var numOfClimbingSpotsLeft = MAX_CLIMBING_SPOTS - $("#" + timeSlot + " .people div.climbing").length;
 			 if (numOfClimbingSpotsLeft <= 0) {
 				 //remove the link to add a new buttons
-				 $("#" + timeSlot + " div:has(a.add_climbing_spot)").remove();
+				 $("#" + timeSlot + " .add_climbing_spot").hide();
 			 } else {
 				 //update the number of spots left in the link
-				 $("#" + timeSlot + " div a.add_climbing_spot").html(numOfClimbingSpotsLeft + " climbing left");
+				 $("#" + timeSlot + " .add_climbing_spot").html(numOfClimbingSpotsLeft + " climbing left");
 			 }
 		 
 		 }
