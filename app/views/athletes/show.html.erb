@@ -1,0 +1,14 @@
+<h2><%=h @athlete.name.upcase %></h2>
+	
+<ul class="athlete_facts">
+  <li>Hometown: <span class="fact"><%=h @athlete.hometown %></span></li>
+  <li>Primary Sports: <span class="fact"><%=h @athlete.primary_sports %></span></li>
+</ul>
+<div>
+  <%=h @athlete.content %>
+</div>
+
+<div class="athlete_images">
+	<img src="<%= @athlete.photo_url %>" />
+</div>
+

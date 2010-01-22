@@ -207,3 +207,55 @@ div.spacer {
 	width: 400px;
 }
 
+div.border_line {
+	border-bottom: 1px solid #C6C7C9;
+}
+
+.athletes  {
+	
+}
+
+.athlete_thumb {
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	font-size: 11px;
+	display: inline-block;
+}
+
+.athlete_facts {
+	font-size: 12px;
+	color: #333;
+	padding-left: 0px;
+}
+
+.athlete_facts li {
+	list-style-type: none;
+}
+
+.athlete_facts .fact {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.athlete_thumb img {
+	width: 120px;
+	height: 120px;
+	border-width: 1px;
+	border-type: solid;
+	border-color: #333;
+}
+
+.athlete_thumb a {
+	display: block;
+}
+
+.athlete_images {
+  margin-top: 10px;	
+}
+
+.athlete_images img {
+	width: 300px;
+	height: 400px;
+}
+
