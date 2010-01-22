@@ -2,7 +2,7 @@ class AthletesController < ApplicationController
   # GET /athletes
   # GET /athletes.xml
   def index
-    @athletes = Athlete.all
+    @athletes = Athlete.find(:all, :order => 'name')
 
     respond_to do |format|
       format.html { render :layout => 'application'} # index.html.erb
