@@ -1,4 +1,5 @@
 <h1>Listing athletes</h1>
+<%= error_messages_for 'athlete' %>
 
 <table>
   <tr>
@@ -10,7 +11,7 @@
     <td><%=h athlete.name %></td>
     <td><%= link_to 'Show', athlete %></td>
     <td><%= link_to 'Edit', edit_athlete_path(athlete) %></td>
-    <td><%= link_to 'Delete', athlete, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', athlete, :prompt => 'Please enter the secret key', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

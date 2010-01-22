@@ -3,7 +3,12 @@
 <% form_for(@athlete) do |f| %>
   <%= f.error_messages %>
 
-  <p>
+ <p>
+    <%= label_tag 'secret_key' %><br />
+    <%= password_field_tag 'secret_key' %>
+  </p>
+ 
+ <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>

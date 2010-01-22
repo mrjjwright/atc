@@ -12,10 +12,10 @@ class AthletesController < ApplicationController
 
 
   def index_admin
-    @athletes = Athlete.all
+    @athletes = Athlete.find(:all, :order => 'name')
 
     respond_to do |format|
-      format.html {render :tempate => 'athletes/index_admin' }# index.html.erb
+      format.html {render :tempate => 'athletes/index_admin', :layout => 'application'}# index.html.erb
       format.xml  { render :xml => @athletes }
     end
   end
@@ -46,6 +46,10 @@ class AthletesController < ApplicationController
   # GET /athletes/1/edit
   def edit
     @athlete = Athlete.find(params[:id])
+ 
+    respond_to do |format|
+       format.html { render :layout => 'application'}
+     end
   end
 
   # POST /athletes
@@ -70,6 +74,18 @@ class AthletesController < ApplicationController
   def update
     @athlete = Athlete.find(params[:id])
 
+    if (params[:secret_key].nil?) then
+      @athlete.errors.add(:base, "Missing secret key")
+      render :action => "edit", :layout => 'application'
+      return
+    end
+
+    if (params[:secret_key] != ATC_SECRET_KEY) 
+      @athlete.errors.add(:base, "Invalid secret key")
+      render :action => "edit", :layout => 'application'
+      return
+    end
+
     respond_to do |format|
       if @athlete.update_attributes(params[:athlete])
         flash[:notice] = 'Athlete was successfully updated.'
@@ -85,8 +101,26 @@ class AthletesController < ApplicationController
   # DELETE /athletes/1
   # DELETE /athletes/1.xml
   def destroy
+    
     @athlete = Athlete.find(params[:id])
+
+    if (params[:prompt_reply].nil?) then
+      @athlete.errors.add(:base, "Missing secret key")
+      @athletes = Athlete.find(:all, :order => 'name')
+      render :action => "index_admin", :layout => 'application'
+      return
+    end
+    
+    if (params[:prompt_reply] != ATC_SECRET_KEY) 
+      @athlete.errors.add(:base, "Invalid secret key")
+       @athletes = Athlete.find(:all, :order => 'name')
+       render :action => "index_admin", :layout => 'application'
+       return
+    end
+    
+
     @athlete.destroy
+  
 
     respond_to do |format|
       format.html { redirect_to(athletes_url) }
