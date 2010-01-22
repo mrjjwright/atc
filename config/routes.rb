@@ -26,7 +26,7 @@ ActionController::Routing::Routes.draw do |map|
   map.home ':page', :controller => 'home', :action => 'show', :page => /partners|schedule|training|/
   map.admin_landing 'admin', :controller => 'media_profiles', :action => 'edit'
   map.admin_athletes 'athletes/admin', :controller => 'athletes', :action => 'index_admin'
-
+  map.admin_athlete 'athletes/:id/admin', :controller => 'athletes', :action => 'edit'
   map.resources :athletes
   
   # Sample resource route (maps HTTP verbs to controller actions automatically):
