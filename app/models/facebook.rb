@@ -7,11 +7,16 @@ class Facebook
   FB_API_KEY = "cef99f497bdc50e0097b3110d1a84163"
   FB_SECRET_KEY = "3ce48cc13f682fcf2e5d3b86abf91693"
   FB_SESSION_KEY = "ef6c33c7b46ca92a2bb8d7a4-710381977"
-  
   #return statuses
   def statuses()
     #session_key = MiniFB.call(FB_API_KEY, FB_SECRET_KEY, "auth.getSession", "auth_token" => "3RZ7WP")
     return MiniFB.call(FB_API_KEY, FB_SECRET_KEY, "FQL.query", "query" => STATUS_FQL, "session_key" => FB_SESSION_KEY, "expires" => 0)
+  end
+  
+  # search for photos for a workout and if they exist import them
+  def photos_for_workout(workout)
+    query = "SELECT pid FROM photo WHERE aid IN ( SELECT aid FROM album WHERE name='#{workout}' and owner=331358835234 ) ORDER BY created"
+    p MiniFB.call(FB_API_KEY, FB_SECRET_KEY, "FQL.query", "query" => query, "session_key" => FB_SESSION_KEY, "expires" => 0)
   end
   
   def sync_workouts()

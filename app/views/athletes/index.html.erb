@@ -4,7 +4,7 @@
 	  
 <% @athletes.each do |athlete| %>
 	    <div class="athlete_thumb">
-			<img src="<%=athlete.photo_url%>"/>
+			<img src="<%=athlete.photo.url%>"/>
 			<%= link_to athlete.name.upcase, athlete %>
 	  </div>
 <% end %>

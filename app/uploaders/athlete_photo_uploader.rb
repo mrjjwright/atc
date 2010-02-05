@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class LandingUploader < CarrierWave::Uploader::Base
+class AthletePhotoUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or ImageScience support
   #     include CarrierWave::RMagick
@@ -13,7 +13,7 @@ class LandingUploader < CarrierWave::Uploader::Base
   # Override the directory where uploaded files will be stored
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "uploads/landing"
+    "uploads/athlete_photos"
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded
@@ -41,7 +41,7 @@ class LandingUploader < CarrierWave::Uploader::Base
 
   # Override the filename of the uploaded files
   #     def filename
-   #      "landing.jpg" if original_filename
-    #   end
+  #       "something.jpg" if original_filename
+  #     end
 
 end
