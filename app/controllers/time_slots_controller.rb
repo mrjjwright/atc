@@ -1,6 +1,7 @@
 class TimeSlotsController < ApplicationController
   # GET /time_slots
   # GET /time_slots.xml
+  
   def index
     @time_slots = TimeSlot.all if (params[:week_of].nil?)
     @time_slots = TimeSlot.on_week(params[:week_of]) unless (params[:week_of].nil?)
@@ -58,7 +59,7 @@ class TimeSlotsController < ApplicationController
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @time_slot.errors, :status => :unprocessable_entity }
-        format.js {render :json => @time_slot.errors}
+        format.js {render :json => @time_slot.errors.full_messages[0]}
       end
     end
   end

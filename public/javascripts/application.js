@@ -142,8 +142,12 @@ function addSpot(timeSlot, isClimbing) {
 		var workoutType = isClimbing ? "climbing" : "regular";
 		var params = {week_of:  weekOf, full_name: fullName, time_slot:  timeSlotId, workout_type: workoutType};
 	
-		$.post("time_slots", params, function() {
-			loadCalData();
+		$.post("time_slots", params, function(statusText) {
+			if (statusText.indexOf("Max") != -1) {
+				alert("Max workouts exceeded");
+			} else {
+				loadCalData();				
+			}
 		});
 	
 		//set the full name in a cookie on the user's browser
