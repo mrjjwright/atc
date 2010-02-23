@@ -25,6 +25,9 @@ role :db,  domain, :primary => true
  
 desc "Symlink public to what webfaction expects the webroot to be"
 task :after_symlink, :roles => :web do
+  #copy over uploaded files to the new releases
+  run "mkdir #{release_path}/public/uploads"
+  run "cp -R /home/#{webfaction_username}/webapps/#{application}/public/uploads #{release_path}/public/"
   run "ln -nfs #{release_path}/public /home/#{webfaction_username}/webapps/#{application}/"
 end
  

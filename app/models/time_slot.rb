@@ -16,7 +16,7 @@ class TimeSlot < ActiveRecord::Base
   
   def max_workouts_for_type(workout_type) 
     return 8 if workout_type == "regular"
-    return 3 if workout_tpe == "climbing"
+    return 3 if workout_type == "climbing"
   end
     
 end
