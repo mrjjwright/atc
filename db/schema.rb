@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100205051630) do
+ActiveRecord::Schema.define(:version => 20100306001539) do
 
   create_table "abouts", :force => true do |t|
     t.text     "content"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20100205051630) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo"
+    t.string   "fb_uid"
   end
 
   create_table "media_profiles", :force => true do |t|

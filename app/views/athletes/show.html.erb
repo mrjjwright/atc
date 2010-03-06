@@ -1,3 +1,19 @@
+<% if @fb_photos != nil then %>
+
+<script type='text/javascript'>//<![CDATA[
+		$(function() {
+			$('#athlete_fb_photos').crossSlide({
+			  speed: 45,
+			  fade: 1
+			}, [
+			<% @fb_photos.each do |photo| %>
+			  { src: '<%=photo["src_big"]%>', dir: '<%=rand(2) == 1 ? "up" : "down" %>'   }<%= photo == @fb_photos.last ? "" : ","%>
+			<% end %>
+			]
+			);
+		});
+	//]]></script>
+<% end %>
 <h2><%=h @athlete.name.upcase %></h2>
 	
 <ul class="athlete_facts">
@@ -8,7 +24,6 @@
   <%=@athlete.content %>
 </div>
 
-<div class="athlete_images">
-	<img src="<%= @athlete.photo_url %>" />
+<div  id="athlete_fb_photos">
 </div>
 

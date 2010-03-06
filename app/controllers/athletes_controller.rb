@@ -25,7 +25,16 @@ class AthletesController < ApplicationController
   # GET /athletes/1.xml
   def show
     @athlete = Athlete.find(params[:id])
-
+    
+    #check to see if this user has a fb uid
+    @athlete.check_for_fb_uid
+    
+    # if the user is a fb_user then let's load the photos they are tagged in
+    if @athlete.fb_uid? then
+      fb = Facebook.new
+      @fb_photos = fb.photos_tagged_user(@athlete.fb_uid)
+    end
+    
     respond_to do |format|
       format.html { render :layout => 'application'} # show.html.erb
       format.xml  { render :xml => @athlete }

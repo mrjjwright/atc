@@ -223,6 +223,12 @@ div.border_line {
 	display: inline-block;
 }
 
+#athlete_fb_photos {
+  margin: 1em auto;
+  width: 550px;
+  height: 350px;
+}
+
 .athlete_facts {
 	font-size: 12px;
 	color: #333;
