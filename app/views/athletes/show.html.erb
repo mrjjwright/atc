@@ -24,6 +24,11 @@
   <%=@athlete.content %>
 </div>
 
+<% if @fb_photos != nil then %>
 <div  id="athlete_fb_photos">
 </div>
-
+<% else  %>
+<div class="athlete_images">
+	<img src="<%= @athlete.photo_url%>">
+</div>
+<% end %>
