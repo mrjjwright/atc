@@ -32,7 +32,8 @@ class AthletesController < ApplicationController
     # if the user is a fb_user then let's load the photos they are tagged in
     if @athlete.fb_uid? then
       fb = Facebook.new
-      @fb_photos = fb.photos_tagged_user(@athlete.fb_uid)
+      photos = fb.photos_tagged_user(@athlete.fb_uid)
+      @fb_photos = photos if photos.size > 0
     end
     
     respond_to do |format|
