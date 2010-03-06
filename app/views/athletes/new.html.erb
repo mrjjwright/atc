@@ -1,6 +1,6 @@
 <h1>New athlete</h1>
 
-<% form_for(@athlete) do |f| %>
+<% form_for(@athlete, :html => {:multipart => true}) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -11,9 +11,9 @@
     <%= f.label :content %><br />
     <%= f.text_area :content %>
   </p>
-  <p>
-    <%= f.label :photo_url %><br />
-    <%= f.text_field :photo_url %>
+ <p>
+    <%= f.label :photo, 'Choose a photo to upload' %><br />
+    <%= f.file_field :photo%>
   </p>
   <p>
     <%= f.label :primary_sports %><br />
