@@ -18,6 +18,14 @@ class HomeController < ApplicationController
       end
   end
 
+  def partners
+    @partner = Partner.first
+     if @partner.nil? then
+          @partner = Partner.new
+          @partner.save
+      end
+  end
+
   def training
     @workouts = Workout.reverse_chrono_order.all
   end

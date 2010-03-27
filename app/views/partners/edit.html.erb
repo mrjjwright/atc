@@ -1,0 +1,20 @@
+<h1>Editing partner</h1>
+
+<% form_for(@partner) do |f| %>
+  <%= f.error_messages %>
+
+ <p>
+    <%= label_tag 'secret_key' %><br />
+    <%= password_field_tag 'secret_key' %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content, :size => "100x30" %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @partner %> |
+<%= link_to 'Back', partners_path %>
