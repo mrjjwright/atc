@@ -1,22 +1,14 @@
-<h1>Listing media_profiles</h1>
+<% @media_profiles.each {|m| %>
+	<div class="news_item">
+		<div class="profiled_media">
+			<h2><%=  link_to m.updated_at.strftime("%a %b #{m.updated_at.day.ordinalize}") + " - " + m.title, m %></h2>
+			<img src="<%= m.landing.url %>"/>
+		</div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Link</th>
-  </tr>
+		<div class="news">
+		<%= m.content %>
+		</div>
+	</div>
+	<div style="clear: both;"></div>
 
-<% @media_profiles.each do |media_profile| %>
-  <tr>
-    <td><%=h media_profile.title %></td>
-    <td><%=h media_profile.link %></td>
-    <td><%= link_to 'Show', media_profile %></td>
-    <td><%= link_to 'Edit', edit_media_profile_path(media_profile) %></td>
-    <td><%= link_to 'Destroy', media_profile, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New media_profile', new_media_profile_path %>
+<% }%>

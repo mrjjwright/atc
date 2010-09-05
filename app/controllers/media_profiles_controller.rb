@@ -5,7 +5,7 @@ class MediaProfilesController < ApplicationController
     @media_profiles = MediaProfile.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html {render :tempate => 'media_profiles/index', :layout => 'application'}
       format.xml  { render :xml => @media_profiles }
     end
   end
@@ -16,7 +16,7 @@ class MediaProfilesController < ApplicationController
     @media_profile = MediaProfile.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :template => 'media_profiles/show', :layout => 'application'}
       format.xml  { render :xml => @media_profile }
     end
   end
@@ -27,13 +27,21 @@ class MediaProfilesController < ApplicationController
     @media_profile = MediaProfile.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :template => 'media_profiles/new', :layout => 'application'}
       format.xml  { render :xml => @media_profile }
     end
   end
 
-  # GET /media_profiles/1/edit
   def edit
+    @media_profile = MediaProfile.find(params[:id])
+    respond_to do |format|
+      format.html { render :template => 'media_profiles/edit', :layout => 'application'}
+    end
+    
+  end
+
+  # GET /media_profiles/1/edit
+  def edit_last
     @media_profile = MediaProfile.last
     if @media_profile.nil? then
       @media_profile = MediaProfile.new

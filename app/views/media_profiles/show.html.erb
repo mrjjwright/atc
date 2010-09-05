@@ -1,13 +1,8 @@
-<p>
-  <b>Title:</b>
-  <%=h @media_profile.title %>
-</p>
+<div class="profiled_media">
+	<h2>  <%=@media_profile.updated_at.strftime("%a %b #{@media_profile.updated_at.day.ordinalize}") + " - " + @media_profile.title %>   </h2>
+	<img src="<%= @media_profile.landing.url %>"/>
+</div>
 
-<p>
-  <b>Link:</b>
-  <%=h @media_profile.link %>
-</p>
-
-
-<%= link_to 'Edit', edit_media_profile_path(@media_profile) %> |
-<%= link_to 'Back', media_profiles_path %>
+<div class="news">
+<%= @media_profile.content %>
+</div>

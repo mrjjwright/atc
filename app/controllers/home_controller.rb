@@ -9,7 +9,6 @@ class HomeController < ApplicationController
     
   end
   
-  
   def about
     @about = About.first
      if @about.nil? then
@@ -18,12 +17,8 @@ class HomeController < ApplicationController
       end
   end
 
-  def partners
-    @partner = Partner.first
-     if @partner.nil? then
-          @partner = Partner.new
-          @partner.save
-      end
+  def news
+    @mediaprofiles = MediaProfile.reverse_chrono_order.all
   end
 
   def training
@@ -33,7 +28,6 @@ class HomeController < ApplicationController
   def show
     render :action => params[:page]
   end
-  
   
   
 end

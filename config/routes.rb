@@ -23,15 +23,16 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'training', :controller => 'home', :action => 'training'
   map.connect 'about', :controller => 'home', :action => 'about'
   map.connect 'about/admin', :controller => 'abouts', :action => 'edit'
-  map.connect 'partners', :controller => 'home', :action => 'partners'
-  map.connect 'partners/admin', :controller => 'partners', :action => 'edit'
+  map.connect 'news', :controller => 'media_profiles', :action => 'index'
+  map.connect 'news/admin', :controller => 'media_profiles', :action => 'new'
+  map.connect 'news/:id', :controller => 'media_profiles', :action => 'show'
+  map.connect 'media_profiles/:id/admin', :controller => 'media_profiles', :action => 'edit'
   map.root :controller => 'home'
-  map.home ':page', :controller => 'home', :action => 'show', :page => /partners|schedule|training|/
-  map.admin_landing 'admin', :controller => 'media_profiles', :action => 'edit'
+  map.home ':page', :controller => 'home', :action => 'show', :page => /news|schedule|training|/
+  map.admin_landing 'admin', :controller => 'media_profiles', :action => 'edit_last'
   map.admin_athletes 'athletes/admin', :controller => 'athletes', :action => 'index_admin'
   map.admin_athlete 'athletes/:id/admin', :controller => 'athletes', :action => 'edit'
   map.resources :athletes
-  map.resources :partners
   
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   map.resources :products

@@ -22,6 +22,8 @@ body {
 	text-decoration: none;
 }
 
+.news_item a {color: #000000; text-decoration: underline; }
+
 
 input[type="text"]
 {
@@ -38,6 +40,10 @@ input[type="text"]
 {
 	width: 700px;
 	font-size: 16px;
+}
+
+.news_item {
+	margin-bottom: 20px;
 }
 
 
@@ -197,17 +203,17 @@ div.spacer {
   height: 1px;
  }
 
-#news {
+.news {
 	position: relative;
 	top: 40px;
 }
 
-#profiled_media {
+.profiled_media {
 	float: left;
 	width: 450px;
 }
 
-#profiled_media img {
+.profiled_media img {
 	border:solid 1px #94a3c4;
 	background:white
 	margin: 10px 0px;

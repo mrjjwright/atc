@@ -1,4 +1,4 @@
-<h1>Admin</h1>
+<h1>Edit News Item</h1>
 
 <% form_for(@media_profile, :html => {:multipart => true}) do |f| %>
   <%= f.error_messages %>
@@ -21,6 +21,7 @@
   </p>
   <p>
     <%= f.submit 'Update' %>
+	<%= link_to 'New', new_media_profile_path %>
   </p>
 <% end %>
 
