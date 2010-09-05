@@ -21,7 +21,8 @@
   </p>
   <p>
     <%= f.submit 'Update' %>
-	<%= link_to 'New', new_media_profile_path %>
+	<%= link_to 'New', new_media_profile_path %> &nbsp;&nbsp;
+	<%= link_to 'Delete', @media_profile, :prompt => 'Please enter the secret key', :method => :delete %>
   </p>
 <% end %>
 
