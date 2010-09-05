@@ -92,7 +92,7 @@ class MediaProfilesController < ApplicationController
     respond_to do |format|
       if @media_profile.update_attributes(params[:media_profile])
         flash[:notice] = 'MediaProfile was successfully updated.'
-        format.html { redirect_to("/") }
+        format.html { redirect_to(@media_profile) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
