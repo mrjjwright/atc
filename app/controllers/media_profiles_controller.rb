@@ -2,7 +2,7 @@ class MediaProfilesController < ApplicationController
   # GET /media_profiles
   # GET /media_profiles.xml
   def index
-    @media_profiles = MediaProfile.all
+    @media_profiles = MediaProfile.reverse_chrono_order
 
     respond_to do |format|
       format.html {render :tempate => 'media_profiles/index', :layout => 'application'}
