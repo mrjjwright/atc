@@ -36,11 +36,17 @@ input[type="text"]
 	font-size: 16px;
 }
 
+#media_profile_video_embed  {
+	font-size: 11px;
+}
+
  textarea
 {
 	width: 700px;
 	font-size: 16px;
 }
+
+
 
 .news_item {
 	margin-bottom: 20px;
@@ -50,6 +56,10 @@ input[type="text"]
 input[type="submit"], input[type="button"] {
  	font-size:16px;
 	width: 100px;
+}
+
+input[type="file"] {
+	padding-top: 3px;
 }
 
 #links {
@@ -218,6 +228,10 @@ div.spacer {
 	background:white
 	margin: 10px 0px;
 	width: 400px;
+}
+
+.profiled_media object {
+	margin: 10px 10px;
 }
 
 div.border_line {

@@ -12,8 +12,12 @@
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :landing, 'Choose a photo to upload' %><br />
+    <%= f.label :landing, 'Choose a photo to upload' %><br/><br/>
     <%= f.file_field :landing %>
+  </p>
+  <p>
+    <%= f.label :landing, 'Or embed a video' %><br />
+    <%= f.text_area :video_embed, :size => "5x5" %>
   </p>
   <p>
     <%= f.label :content, 'Content' %><br />
