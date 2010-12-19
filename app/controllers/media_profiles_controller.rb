@@ -2,7 +2,7 @@ class MediaProfilesController < ApplicationController
   # GET /media_profiles
   # GET /media_profiles.xml
   def index
-    @media_profiles = MediaProfile.all
+    @media_profiles = MediaProfile.reverse_chrono_order
 
     respond_to do |format|
       format.html {render :tempate => 'media_profiles/index', :layout => 'application'}
@@ -92,7 +92,7 @@ class MediaProfilesController < ApplicationController
     respond_to do |format|
       if @media_profile.update_attributes(params[:media_profile])
         flash[:notice] = 'MediaProfile was successfully updated.'
-        format.html { redirect_to("/") }
+        format.html { redirect_to(@media_profile) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
