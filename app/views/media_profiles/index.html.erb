@@ -2,7 +2,15 @@
 	<div class="news_item">
 		<div class="profiled_media">
 			<h2><%=  link_to m.updated_at.strftime("%a %b #{m.updated_at.day.ordinalize}") + " - " + m.title, m %></h2>
-			<img src="<%= m.landing.url %>"/>
+				<%
+					if not m.video_embed.blank? then
+				%> 
+					<%= m.video_embed%>
+				<%
+			else
+				%>
+				<img src="<%= m.landing.url %>"/>
+			<%end%>
 		</div>
 
 		<div class="news">

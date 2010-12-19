@@ -1,6 +1,14 @@
 <div class="profiled_media">
 	<h2>  <%=@media_profile.updated_at.strftime("%a %b #{@media_profile.updated_at.day.ordinalize}") + " - " + @media_profile.title %>   </h2>
-	<img src="<%= @media_profile.landing.url %>"/>
+		<%
+			if not @media_profile.video_embed.blank? then
+		%> 
+			<%= @media_profile.video_embed%>
+		<%
+	else
+		%>
+		<img src="<%= @media_profile.landing.url %>"/>
+	<%end%>
 </div>
 
 <div class="news">
