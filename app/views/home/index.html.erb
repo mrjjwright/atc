@@ -1,7 +1,7 @@
 <div class="profiled_media">
 	<h2> <%= @media_profile.title %> </h2>
 	<%
-		if not @media_profile.video_embed.empty? then
+		if not @media_profile.video_embed.blank? then
 	%> 
 		<%= @media_profile.video_embed%>
 	<%
