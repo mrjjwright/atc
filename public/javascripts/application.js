@@ -46,17 +46,20 @@ jQuery.ajaxSetup({
 $(document).ready(function() {
 
  //if we are on the calendar page load the calendar and set up the handlers
- if ($("#weekly_calendar").length != 0){
-  //set monday to this week's monday
-    
-   monday = Date.today().last().monday();
-  var today = Date.today().toString("ddd");
-  if (today == "Sun") {
-    monday = Date.today().next().monday();
-  } 
-  if (today == "Mon") {
-    monday = Date.today();
-  }
+  if ($("#weekly_calendar").length != 0){
+ 
+    // Determine the right starting Monday
+    var today = Date.today().toString("ddd");
+    if (today == "Sun" || today === "Sat") {
+      // Switch over to a new week on Sat or Sunday
+      monday = Date.today().next().monday();
+    } else if (today == "Mon") {
+      // If today is Monday, then stay here 
+      monday = Date.today();
+    } else {
+      //Set monday to this week's monday
+      monday = Date.today().last().monday();
+    }
   
    thisMonday = monday.clone();
    resetCal();
